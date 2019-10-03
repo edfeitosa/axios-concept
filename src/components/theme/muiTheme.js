@@ -1,0 +1,23 @@
+import { createMuiTheme } from '@material-ui/core';
+
+const muiTheme = createMuiTheme({
+  palette: {
+    primary: {
+      main: '#004691'
+    },
+    secondary: {
+      main: '#ff5f0a'
+    },
+    text: {
+      main: '#4c4c4c',
+      h1: '#004691',
+      h2: '#126fdf'
+    },
+    error: {
+      main: '#f00',
+      contrastText: '#fff'
+    }
+  }
+});
+
+export default muiTheme;
