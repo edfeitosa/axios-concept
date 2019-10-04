@@ -3,12 +3,19 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 // const CspHtmlWebpackPlugin = require('csp-html-webpack-plugin');
 const GoogleFontsPlugin = require('@beyonk/google-fonts-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const dotenv = require('dotenv');
+
+const env = dotenv.config().parsed;
+const envKeys = Object.keys(env).reduce((prev, next) => {
+  prev[`process.env.${next}`] = JSON.stringify(env[next]);
+  return prev;
+}, {});
 
 var isPrd = process.env.NODE_ENV === 'production';
 var folder =  isPrd ? '/dist' : '/public';
 
 module.exports = {
-  entry: ['@babel/polyfill', './src/index.jsx'],
+  entry: ['regenerator-runtime', './src/index.jsx'],
   module: {
     rules: [
       {
@@ -47,7 +54,8 @@ module.exports = {
         }
       ],
       formats: ['ttf']
-    })
+    }),
+    new webpack.DefinePlugin(envKeys)
   ],
   optimization: {
     minimizer: [
