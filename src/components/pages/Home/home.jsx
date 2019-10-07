@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import appClient from '../../../clients/appClient';
 
 const Home = () => {
-  appClient.getUsers();
+  const [users, setUsers] = useState([]);
+  useEffect(() => {
+    async function loadData() {
+      const response = await appClient.getUsers();
+      setUsers(response.data);
+    }
+    loadData();
+  },[]);
   return (
-    <span>home.jsx // {process.env.BONUZ_API_URL}</span>
+    <span>{
+      users.map((item, key) => (
+        <p key={key}>{item.firstName}</p>
+      ))
+    }</span>
   )
 }
 

@@ -12,7 +12,7 @@ class AppClient {
     try {
       const httpClient = this._getHttpClient();
       const response = await httpClient.get('/users');
-      console.log(response);
+      return response;
     } catch (error) {
       console.log(error);
     }
