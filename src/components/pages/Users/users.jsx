@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Confirmation = () => {
+const Users = () => {
   return (
     <span>
-      confirmation.jsx
+      users.jsx
       <Link to='/'>
         <button>Voltar</button>
       </Link>
@@ -12,4 +12,4 @@ const Confirmation = () => {
   )
 }
 
-export default Confirmation;
+export default Users;

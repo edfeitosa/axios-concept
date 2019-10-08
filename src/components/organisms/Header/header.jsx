@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <AppBar position="static" className={classes.formattedHeader}>
       <Toolbar>
-        <p>header.jsx</p>
+        header.jsx
       </Toolbar>
     </AppBar>
   )

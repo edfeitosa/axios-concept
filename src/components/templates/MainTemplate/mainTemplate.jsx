@@ -4,6 +4,7 @@ import { Grid, Container } from '@material-ui/core';
 import Routes from '../../../routes';
 import { makeStyles } from '@material-ui/core/styles';
 
+import Menu from '../../molecules/Menu/menu';
 import Header from '../../organisms/Header/header';
 import Footer from '../../organisms/Footer/footer';
 import styles from './styles';
@@ -17,6 +18,7 @@ const MainTemplate = () => {
       <Header />
       <Container className='alignTextToCenter'>
         <BrowserRouter>
+          <Menu />
           <Routes />
         </BrowserRouter>
       </Container>
