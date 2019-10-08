@@ -1,26 +1,12 @@
-import React, { useState, useEffect } from 'react';
-
-import appClient from '../../../clients/appClient';
+import React, { Fragment } from 'react';
 
 const Home = () => {
 
-  const [users, setUsers] = useState([]);
-
-  async function loadData() {
-    const response = await appClient.getUsers();
-    setUsers(response.data);
-  }
-
-  useEffect(() => {
-    loadData();
-  },[]);
-
   return (
-    <span>{
-      users.map((item, key) => (
-        <p key={key}>{item.firstName} {item.lastName}</p>
-      ))
-    }</span>
+    <Fragment>
+      <h1>Home</h1>
+      <p>Está é a página inicial do projeto de teste</p>
+    </Fragment>
   )
 }
 

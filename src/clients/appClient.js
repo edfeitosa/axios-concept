@@ -17,6 +17,26 @@ class AppClient {
       console.log(error);
     }
   }
+
+  async getCompanies() {
+    try {
+      const httpClient = this._getHttpClient();
+      const response = await httpClient.get('/companies');
+      return response;
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  async getCities() {
+    try {
+      const httpClient = this._getHttpClient();
+      const response = await httpClient.get('/cities');
+      return response;
+    } catch (error) {
+      console.log(error);
+    }
+  }
 }
 
 export default new AppClient();

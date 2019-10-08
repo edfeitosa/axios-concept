@@ -9,9 +9,9 @@ const styles = {
     },
     h1: {
       color: muiTheme.palette.text.h1,
-      fontSize: '1.3rem',
+      fontSize: '1.5rem',
       margin: '0px 0px 10px 0px',
-      fontWeight: '500'
+      fontWeight: '700'
     },
     h2: {
       color: muiTheme.palette.text.h2,
@@ -27,6 +27,9 @@ const styles = {
     },
     '.alignTextToCenter': {
       textAlign: 'center'
+    },
+    '.alignTextToLeft': {
+      textAlign: 'left'
     }
   }
 }

@@ -10,7 +10,7 @@ const muiTheme = createMuiTheme({
     },
     text: {
       main: '#4c4c4c',
-      h1: '#004691',
+      h1: '#2c2c2c',
       h2: '#126fdf'
     },
     error: {

@@ -3,13 +3,13 @@ import React, { Fragment, useState, useEffect } from 'react';
 import appClient from '../../../clients/appClient';
 import ListItem from '../../molecules/ListItem/listItem'
 
-const Companies = () => {
+const Cities = () => {
 
-  const [companies, setCompanies] = useState([]);
+  const [cities, setCities] = useState([]);
 
   async function loadData() {
-    const response = await appClient.getCompanies();
-    setCompanies(response.data);
+    const response = await appClient.getCities();
+    setCities(response.data);
   }
 
   useEffect(() => {
@@ -18,18 +18,17 @@ const Companies = () => {
 
   return (
     <Fragment>
-      <h1>Companies</h1>
+      <h1>Cities</h1>
       {
-        companies.map((item, key) => (
+        cities.map((item, key) => (
           <ListItem
             key={key}
-            description='Empresa'
-            title={item.name}
-            subTitle={item.email} />
+            description='Cidade'
+            title={item.name} />
         ))
       }
     </Fragment>
   )
 }
 
-export default Companies;
+export default Cities;

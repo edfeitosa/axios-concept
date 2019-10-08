@@ -1,14 +1,11 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { Fragment } from 'react';
 
 const NotFound = () => {
   return (
-    <span>
-      notFound.jsx
-      <Link to='/'>
-        <button>Voltar</button>
-      </Link>
-    </span>
+    <Fragment>
+      <h1>Ops...</h1>
+      <p>Deu ruim! Página que você está buscando não foi encontrada</p>
+    </Fragment>
   )
 }
 

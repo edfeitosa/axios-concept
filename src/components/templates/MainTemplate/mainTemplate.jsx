@@ -16,7 +16,7 @@ const MainTemplate = () => {
   return (
     <Grid container>
       <Header />
-      <Container className='alignTextToCenter'>
+      <Container className='alignTextToLeft'>
         <BrowserRouter>
           <Menu />
           <Routes />
