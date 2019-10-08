@@ -11,8 +11,8 @@ const styles = {
       backgroundColor: '#4c4c4c',
       color: '#fff',
       textDecoration: 'none',
-      minWidth: '40px',
-      padding: '5px 10px'
+      minWidth: '35px',
+      padding: '5px'
     }
   }
 }

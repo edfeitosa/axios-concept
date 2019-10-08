@@ -15,6 +15,7 @@ const Menu = () => {
       <LinkMenu href='/companies' title='Companies' />
       <LinkMenu href='/cities' title='Cities' />
       <LinkMenu href='/states' title='States' />
+      <LinkMenu href='/countries' title='Countries' />
     </div>
   )
 }
