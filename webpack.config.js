@@ -39,7 +39,7 @@ module.exports = {
       template: __dirname + '/src/index.ejs',
       filename: __dirname + '/' + folder +  '/index.html',
       lang: 'pt-BR',
-      title: 'Xewards Delivery Coupon',
+      title: 'Project Test Error',
       meta: {
         charset: 'utf-8',
         viewport: 'width=device-width, initial-scale=1'

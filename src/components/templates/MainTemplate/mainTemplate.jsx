@@ -4,6 +4,8 @@ import { Grid, Container } from '@material-ui/core';
 import Routes from '../../../routes';
 import { makeStyles } from '@material-ui/core/styles';
 
+import ErrorBoundary from '../../../errorBoundary';
+
 import Menu from '../../molecules/Menu/menu';
 import Header from '../../organisms/Header/header';
 import Footer from '../../organisms/Footer/footer';
@@ -18,8 +20,10 @@ const MainTemplate = () => {
       <Header />
       <Container className='alignTextToLeft'>
         <BrowserRouter>
-          <Menu />
-          <Routes />
+          <ErrorBoundary>
+            <Menu />
+            <Routes />
+          </ErrorBoundary>
         </BrowserRouter>
       </Container>
       <Footer />

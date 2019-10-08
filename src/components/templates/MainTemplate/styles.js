@@ -19,6 +19,9 @@ const styles = {
       margin: '0px 0px 10px 0px',
       fontWeight: '500'
     },
+    a: {
+      textDecoration: 'none'
+    },
     p: {
       margin: '0px 0px 10px 0px',
       fontSize: '1rem',

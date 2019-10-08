@@ -18,7 +18,7 @@ const Users = () => {
 
   return (
     <Fragment>
-      <h1>Users</h1>
+      <h1>{this.state.users}</h1>
       {
         users.map((item, key) => (
           <ListItem
