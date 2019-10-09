@@ -16,20 +16,27 @@ const Companies = () => {
     loadData();
   }, []);
 
+  if (companies.length) {
+    return (
+      <Fragment>
+        <h1>Companies</h1>
+        {
+          companies.map((item, key) => (
+            <ListItem
+              key={key}
+              description='Empresa'
+              title={item.name} />
+          ))
+        }
+      </Fragment>
+    )
+  }
   return (
     <Fragment>
       <h1>Companies</h1>
-      {
-        companies.map((item, key) => (
-          <ListItem
-            key={key}
-            description='Empresa'
-            title={item.name}
-            subTitle={item.email} />
-        ))
-      }
+      Não foi possível carregar o componente
     </Fragment>
-  )
+  );
 }
 
 export default Companies;

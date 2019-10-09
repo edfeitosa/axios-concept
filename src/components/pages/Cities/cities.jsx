@@ -16,19 +16,27 @@ const Cities = () => {
     loadData();
   }, []);
 
+  if (cities.length) {
+    return (
+      <Fragment>
+        <h1>Cities</h1>
+        {
+          cities.map((item, key) => (
+            <ListItem
+              key={key}
+              description='Cidade'
+              title={item.name} />
+          ))
+        }
+      </Fragment>
+    )
+  }
   return (
     <Fragment>
       <h1>Cities</h1>
-      {
-        cities.map((item, key) => (
-          <ListItem
-            key={key}
-            description='Cidade'
-            title={item.name} />
-        ))
-      }
+      Não foi possível carregar o componente
     </Fragment>
-  )
+  );
 }
 
 export default Cities;

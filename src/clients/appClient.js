@@ -14,7 +14,7 @@ class AppClient {
       const response = await httpClient.get('/users');
       return response;
     } catch (error) {
-      console.log(error);
+      throw error;
     }
   }
 
@@ -24,7 +24,7 @@ class AppClient {
       const response = await httpClient.get('/companies');
       return response;
     } catch (error) {
-      console.log(error);
+      return error;
     }
   }
 
@@ -34,7 +34,7 @@ class AppClient {
       const response = await httpClient.get('/cities');
       return response;
     } catch (error) {
-      console.log(error);
+      throw error;
     }
   }
 }

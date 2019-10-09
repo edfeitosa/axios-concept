@@ -16,20 +16,28 @@ const Users = () => {
     loadData();
   }, []);
 
+  if (users.length) {
+    return (
+      <Fragment>
+        <h1>Users</h1>
+        {
+          users.map((item, key) => (
+            <ListItem
+              key={key}
+              description='Nome'
+              title={`${item.firstName} ${item.lastName}`}
+              subTitle={item.email} />
+          ))
+        }
+      </Fragment>
+    )
+  }
   return (
     <Fragment>
       <h1>Users</h1>
-      {
-        users.map((item, key) => (
-          <ListItem
-            key={key}
-            description='Nome'
-            title={`${item.firstName} ${item.lastName}`}
-            subTitle={item.email} />
-        ))
-      }
+      Não foi possível carregar o componente
     </Fragment>
-  )
+  );
 }
 
 export default Users;
